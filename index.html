@@ -1,18 +1,50 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-BR">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Neymar Jr: O Último Ícone do Futebol Arte</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;800;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
- <header>
-    <h1>titulo do blog </h1>
-    <p>breve texto sobre o blog</p>
- </header>   
- <main>
-    <h2>subtitulo</h2>
-    <p>não tenho muitas ideias do que escrever no meu blog</p>
- </main>
+
+    <!-- Botão de Curtir -->
+    <button class="btn-curtir" onclick="curtirConteudo()">
+        ⚡ <span id="contador-curtidas">0</span>
+    </button>
+
+    <!-- Container Principal -->
+    <div class="container">
+        
+        <!-- Cabeçalho -->
+        <header>
+            <h1>Neymar Jr<br>O Rei da Ousadia</h1>
+            <p class="subtitulo">A magia, os dribles e o legado do camisa 10</p>
+        </header>
+
+        <!-- Conteúdo Principal -->
+        <main>
+            <div class="imagem-container">
+                <img src="neymar-em-campo.png" alt="Neymar Jr comemorando em campo">
+            </div>
+
+            <article class="conteudo-blog">
+                <h2>Genialidade incompreendida ou pura arte?</h2>
+                <p>Neymar trouxe de volta a essência do futebol brasileiro: o drible inesperado, a alegria e a capacidade de decidir jogos em um único lance de genialidade pura.</p>
+            </article>
+        </main>
+
+    </div>
+
+    <!-- Script para o funcionamento do botão -->
+    <script>
+        let curtidas = 0;
+        function curtirConteudo() {
+            curtidas++;
+            document.getElementById('contador-curtidas').innerText = curtidas;
+        }
+    </script>
+
 </body>
 </html>
