@@ -3,48 +3,147 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Neymar Jr: O Último Ícone do Futebol Arte</title>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;800;900&display=swap" rel="stylesheet">
+    <title>Neymar Vlog - GitHub Edition</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-    <!-- Botão de Curtir -->
-    <button class="btn-curtir" onclick="curtirConteudo()">
-        ⚡ <span id="contador-curtidas">0</span>
-    </button>
+    <header>
+        <h1 class="rgb-text">NEYMAR JR VLOG</h1>
+        <p class="subtitle">Acompanhe os bastidores e a história do craque</p>
+    </header>
 
-    <!-- Container Principal -->
-    <div class="container">
-        
-        <!-- Cabeçalho -->
-        <header>
-            <h1>Neymar Jr<br>O Rei da Ousadia</h1>
-            <p class="subtitulo">A magia, os dribles e o legado do camisa 10</p>
-        </header>
-
-        <!-- Conteúdo Principal -->
-        <main>
-            <div class="imagem-container">
-                <img src="neymar-em-campo.png" alt="Neymar Jr comemorando em campo">
+    <main class="container">
+        <!-- Seção do Vídeo do Vlog -->
+        <section class="vlog-video">
+            <h2 class="rgb-text">Último Episódio</h2>
+            <div class="video-placeholder">
+                <!-- Substitua o link abaixo pelo link real do seu vídeo ou player -->
+                <p>Insira seu vídeo de Vlog aqui</p>
             </div>
+        </section>
 
-            <article class="conteudo-blog">
-                <h2>Genialidade incompreendida ou pura arte?</h2>
-                <p>Neymar trouxe de volta a essência do futebol brasileiro: o drible inesperado, a alegria e a capacidade de decidir jogos em um único lance de genialidade pura.</p>
-            </article>
-        </main>
+        <!-- Seção da Imagem do Neymar -->
+        <section class="neymar-gallery">
+            <h2 class="rgb-text">Galeria do Craque</h2>
+            <div class="image-container">
+                <!-- A imagem abaixo usa um placeholder público. Substitua pelo link da sua foto do Neymar -->
+                <img src="https://unsplash.com" alt="Neymar Jr" class="neymar-img">
+            </div>
+        </section>
 
-    </div>
+        <!-- Descrição do Vlog -->
+        <section class="vlog-content">
+            <h2 class="rgb-text">Sobre o Canal</h2>
+            <p>Um espaço dedicado a analisar as jogadas, o estilo de vida e os momentos marcantes da carreira de Neymar Jr. Fique por dentro de tudo com estética gamer e urbana direto no seu GitHub Pages.</p>
+        </section>
+    </main>
 
-    <!-- Script para o funcionamento do botão -->
-    <script>
-        let curtidas = 0;
-        function curtirConteudo() {
-            curtidas++;
-            document.getElementById('contador-curtidas').innerText = curtidas;
-        }
-    </script>
+    <footer>
+        <p>© 2026 Criado para o GitHub Pages - <span class="rgb-text">Neymar Vlog</span></p>
+    </footer>
 
 </body>
 </html>
+/* Configurações Globais - Fundo Preto */
+body {
+    background-color: #000000;
+    color: #ffffff;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+}
+
+.container {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+/* Efeito RGB Animado para as Letras */
+.rgb-text {
+    font-weight: 900;
+    text-transform: uppercase;
+    background: linear-gradient(to right, #ff0000, #00ff00, #0000ff, #ff00ff, #ff0000);
+    background-size: 400% 400%;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    animation: rgb-animation 6s linear infinite;
+    display: inline-block;
+}
+
+@keyframes rgb-animation {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+}
+
+/* Estilização dos Blocos de Conteúdo */
+header {
+    padding: 40px 20px;
+    border-bottom: 1px solid #222;
+}
+
+header h1 {
+    font-size: 3rem;
+    margin-bottom: 10px;
+}
+
+.subtitle {
+    color: #888;
+    font-size: 1.1rem;
+}
+
+section {
+    margin: 40px 0;
+    padding: 20px;
+    background: #0a0a0a;
+    border: 1px solid #1a1a1a;
+    border-radius: 8px;
+}
+
+section h2 {
+    font-size: 1.8rem;
+    margin-top: 0;
+}
+
+/* Espaço para o Vídeo */
+.video-placeholder {
+    width: 100%;
+    height: 400px;
+    background: #111;
+    border: 2px dashed #333;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #555;
+    border-radius: 4px;
+}
+
+/* Estilização da Imagem */
+.image-container {
+    display: flex;
+    justify-content: center;
+    margin-top: 15px;
+}
+
+.neymar-img {
+    max-width: 100%;
+    height: auto;
+    max-height: 450px;
+    border-radius: 8px;
+    box-shadow: 0 0 15px rgba(255, 255, 255, 0.1);
+    transition: transform 0.3s ease;
+}
+
+.neymar-img:hover {
+    transform: scale(1.02);
+}
+
+footer {
+    padding: 20px;
+    color: #444;
+    font-size: 0.9rem;
+    border-top: 1px solid #222;
+}
