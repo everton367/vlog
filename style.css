@@ -61,17 +61,24 @@ section h2 {
     margin-top: 0;
 }
 
-/* Espaço para o Vídeo */
-.video-placeholder {
+/* Torna o vídeo do YouTube responsivo na tela */
+.video-container {
+    position: relative;
+    padding-bottom: 56.25%; /* Proporção 16:9 */
+    padding-top: 30px; 
+    height: 0; 
+    overflow: hidden;
+    border-radius: 8px;
+}
+
+.video-container iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
     width: 100%;
-    height: 400px;
-    background: #111;
-    border: 2px dashed #333;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    color: #555;
-    border-radius: 4px;
+    height: 100%;
+}
+
 }
 
 /* Estilização da Imagem */
