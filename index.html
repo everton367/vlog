@@ -92,13 +92,13 @@
             text-decoration: underline;
         }
 
-        /* Ajuste do link do rodapé */
+        /* Ajustes do rodapé */
         footer p {
             margin: 5px 0;
         }
         
         .footer-link {
-            color: #ff4b4b;
+            color: #007bff;
             text-decoration: none;
             font-weight: bold;
         }
@@ -136,7 +136,7 @@
         </section>
     </main>
 
-    <!-- Menu flutuante de ações com contadores -->
+    <!-- Menu flutuante de ações com a quantidade de likes e dislikes -->
     <div class="actions-container">
         <button class="btn-floating theme-btn" onclick="toggleTheme()" id="themeBtn">🌙 Modo Escuro</button>
         <button class="btn-floating like-btn" onclick="curtir()">❤️ Curtir (<span id="like-count">0</span>)</button>
@@ -145,12 +145,12 @@
 
     <footer>
         <p>© 2026 Criado para o GitHub Pages - <span class="rgb-text">Neymar Vlog</span></p>
-        <!-- Link adicionado ao final conforme solicitado -->
-        <p>Link do vídeo usado: <a class="footer-link" href="https://www.youtube.com/watch?v=1xl7YThk-e8" target="_blank">A História Completa do NEYMAR JR em 8 Minutos</a></p>
+        <!-- Link de acesso direto adicionado no espaço abaixo -->
+        <p>Acesse o vídeo no YouTube: <a class="footer-link" href="https://www.youtube.com/watch?v=1xl7YThk-e8" target="_blank">A História Completa do NEYMAR JR em 8 Minutos</a></p>
     </footer>
 
     <script>
-        // Inicialização dos contadores
+        // Inicialização das variáveis de contagem
         let likes = 0;
         let dislikes = 0;
 
