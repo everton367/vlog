@@ -1,109 +1,100 @@
-/* Configurações Globais - Fundo Preto */
+/* Variáveis de cores para o modo claro/escuro */
+:root {
+    --bg-color: #ffffff;
+    --text-color: #333333;
+}
+
+[data-theme="dark"] {
+    --bg-color: #121212;
+    --text-color: #f5f5f5;
+}
+
 body {
-    background-color: #000000;
-    color: #ffffff;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    margin: 0;
-    padding: 0;
-    text-align: center;
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    transition: background-color 0.3s ease, color 0.3s ease;
 }
 
-.container {
-    max-width: 900px;
-    margin: 0 auto;
-    padding: 20px;
-}
-
-/* Efeito RGB Animado para as Letras */
-.rgb-text {
-    font-weight: 900;
-    text-transform: uppercase;
-    background: linear-gradient(to right, #ff0000, #00ff00, #0000ff, #ff00ff, #ff0000);
-    background-size: 400% 400%;
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    animation: rgb-animation 6s linear infinite;
-    display: inline-block;
-}
-
-@keyframes rgb-animation {
-    0% { background-position: 0% 50%; }
-    50% { background-position: 100% 50%; }
-    100% { background-position: 0% 50%; }
-}
-
-/* Estilização dos Blocos de Conteúdo */
-header {
-    padding: 40px 20px;
-    border-bottom: 1px solid #222;
-}
-
-header h1 {
-    font-size: 3rem;
-    margin-bottom: 10px;
-}
-
-.subtitle {
-    color: #888;
-    font-size: 1.1rem;
-}
-
-section {
-    margin: 40px 0;
-    padding: 20px;
-    background: #0a0a0a;
-    border: 1px solid #1a1a1a;
-    border-radius: 8px;
-}
-
-section h2 {
-    font-size: 1.8rem;
-    margin-top: 0;
-}
-
-/* Torna o vídeo do YouTube responsivo na tela */
-.video-container {
-    position: relative;
-    padding-bottom: 56.25%; /* Proporção 16:9 */
-    padding-top: 30px; 
-    height: 0; 
-    overflow: hidden;
-    border-radius: 8px;
-}
-
-.video-container iframe {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-}
-
-}
-
-/* Estilização da Imagem */
-.image-container {
+/* Container fixo para os botões no canto inferior direito */
+.actions-container {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
     display: flex;
-    justify-content: center;
-    margin-top: 15px;
+    gap: 10px;
+    z-index: 1000;
 }
 
-.neymar-img {
-    max-width: 100%;
-    height: auto;
-    max-height: 450px;
-    border-radius: 8px;
-    box-shadow: 0 0 15px rgba(255, 255, 255, 0.1);
-    transition: transform 0.3s ease;
+/* Estilo base dos botões flutuantes */
+.btn-floating {
+    background-color: #ffffff;
+    border-radius: 50px;
+    padding: 10px 18px;
+    font-size: 18px;
+    font-weight: bold;
+    cursor: pointer;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3);
+    transition: transform 0.2s ease, background-color 0.2s ease, color 0.2s ease;
 }
 
-.neymar-img:hover {
-    transform: scale(1.02);
+.btn-floating:hover {
+    transform: scale(1.1);
 }
 
-footer {
-    padding: 20px;
-    color: #444;
-    font-size: 0.9rem;
-    border-top: 1px solid #222;
+.like-btn {
+    border: 2px solid #ff4b4b;
+    color: #ff4b4b;
+}
+
+.like-btn:hover {
+    background-color: #ff4b4b;
+    color: #ffffff;
+}
+
+.dislike-btn {
+    border: 2px solid #555555;
+    color: #555555;
+}
+
+.dislike-btn:hover {
+    background-color: #555555;
+    color: #ffffff;
+}
+
+.theme-btn {
+    border: 2px solid #007bff;
+    color: #007bff;
+}
+
+.theme-btn:hover {
+    background-color: #007bff;
+    color: #ffffff;
+}
+
+/* Estilo do link da fonte do vídeo */
+.video-source-link {
+    display: inline-block;
+    margin-top: 10px;
+    color: #007bff;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.video-source-link:hover {
+    text-decoration: underline;
+}
+
+/* Ajustes do rodapé e links */
+footer p {
+    margin: 5px 0;
+}
+
+.footer-link {
+    color: #007bff;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.footer-link:hover {
+    text-decoration: underline;
 }
