@@ -1,4 +1,4 @@
-<<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="pt-BR">
 <head>
     <meta charset="UTF-8">
@@ -91,6 +91,21 @@
         .video-source-link:hover {
             text-decoration: underline;
         }
+
+        /* Ajuste do link do rodapé */
+        footer p {
+            margin: 5px 0;
+        }
+        
+        .footer-link {
+            color: #ff4b4b;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        .footer-link:hover {
+            text-decoration: underline;
+        }
     </style>
 </head>
 <body>
@@ -105,7 +120,6 @@
             <div class="video-container">
                 <iframe width="560" height="315" src="https://www.youtube.com/embed/1xl7YThk-e8" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
             </div>
-            <!-- Link para a origem do vídeo -->
             <a href="https://www.youtube.com/watch?v=1xl7YThk-e8" target="_blank" class="video-source-link">📺 Assistir vídeo original no YouTube</a>
         </section>
 
@@ -122,23 +136,33 @@
         </section>
     </main>
 
-    <!-- Menu flutuante de ações -->
+    <!-- Menu flutuante de ações com contadores -->
     <div class="actions-container">
         <button class="btn-floating theme-btn" onclick="toggleTheme()" id="themeBtn">🌙 Modo Escuro</button>
-        <button class="btn-floating like-btn" onclick="curtir()">❤️ Curtir</button>
-        <button class="btn-floating dislike-btn" onclick="descurtir()">👎 Descurtir</button>
+        <button class="btn-floating like-btn" onclick="curtir()">❤️ Curtir (<span id="like-count">0</span>)</button>
+        <button class="btn-floating dislike-btn" onclick="descurtir()">👎 Descurtir (<span id="dislike-count">0</span>)</button>
     </div>
 
     <footer>
         <p>© 2026 Criado para o GitHub Pages - <span class="rgb-text">Neymar Vlog</span></p>
+        <!-- Link adicionado ao final conforme solicitado -->
+        <p>Link do vídeo usado: <a class="footer-link" href="https://www.youtube.com/watch?v=1xl7YThk-e8" target="_blank">A História Completa do NEYMAR JR em 8 Minutos</a></p>
     </footer>
 
     <script>
+        // Inicialização dos contadores
+        let likes = 0;
+        let dislikes = 0;
+
         function curtir() {
+            likes++;
+            document.getElementById('like-count').innerText = likes;
             alert('Você curtiu a página!');
         }
 
         function descurtir() {
+            dislikes++;
+            document.getElementById('dislike-count').innerText = dislikes;
             alert('Você descurtiu a página.');
         }
 
@@ -146,7 +170,6 @@
             const body = document.body;
             const themeBtn = document.getElementById('themeBtn');
             
-            // Verifica o tema atual e alterna
             if (body.getAttribute('data-theme') === 'dark') {
                 body.removeAttribute('data-theme');
                 themeBtn.innerText = '🌙 Modo Escuro';
